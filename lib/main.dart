@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import '00_Utility/01_sharedPreferences.dart';
 import '01_Pages/01_000_QuizList.dart';
 import '01_Pages/01_300_Setting.dart';
 import '99_Others/99_01_Config.dart';
 
-void main() => runApp(MyApp());
+void main()async{
+  await SharedPrefs.setInstance();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
