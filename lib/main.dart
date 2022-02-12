@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '01_Pages/01_000_QuizList.dart';
 import '01_Pages/01_300_Setting.dart';
-import '01_Pages/99_test.dart';
+import '99_Others/99_01_Config.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -32,8 +31,8 @@ class _HomePageState extends State<HomePage>
 
   List<BottomNavigationBarItem> myBottomNavBarItems() {
     return [
-      BottomNavigationBarItem(icon: Icon(Icons.home_outlined),label: "ホーム"),
-      BottomNavigationBarItem(icon: Icon(Icons.favorite_border_outlined),label: "お気に入り"),
+      BottomNavigationBarItem(icon: Icon(Icons.home_outlined),label: "クイズ一覧"),
+      BottomNavigationBarItem(icon: Icon(Icons.star_border_outlined),label: "お気に入り"),
       BottomNavigationBarItem(icon: Icon(Icons.settings),label: "設定"),
     ];
   }
@@ -54,6 +53,8 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+    ColorConfig().init(context);
     return Scaffold(
       body: PageView(
           controller: _pageController,
@@ -79,8 +80,8 @@ class _HomePageState extends State<HomePage>
         },
         items: myBottomNavBarItems(),
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.green,
-        unselectedItemColor: Colors.black54,
+        selectedItemColor: ColorConfig.Blue,
+        unselectedItemColor: ColorConfig.Black,
       ),
     );
   }
