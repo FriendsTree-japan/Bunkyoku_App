@@ -408,4 +408,8 @@ packages:
     version: "0.2.0+1"
 sdks:
   dart: ">=2.14.0 <3.0.0"
+<<<<<<< HEAD
   flutter: ">=2.5.0"
+=======
+  flutter: ">=2.8.0"
+>>>>>>> b5306e70b6be975ca890a5594a0df064bed87082

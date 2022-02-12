@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:bunkyoku_app/99_Others/99_01_Config.dart';
 
 class Setting extends StatefulWidget {
   @override
@@ -10,19 +11,23 @@ class _SettingState extends State<Setting> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+    ColorConfig().init(context);
     return Scaffold(
       appBar: AppBar(
         title: Text('設定'),
-        backgroundColor: Colors.green,
+        backgroundColor: ColorConfig.Blue,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextButton(
             style: TextButton.styleFrom(
               textStyle: const TextStyle(fontSize: 20),
             ),
             onPressed: () {},
-            child: const Text('広告をやめる'),
+            child: const Text('広告をやめる' ,style: TextStyle(color: Colors.black)),
           ),
           TextButton(
             style: TextButton.styleFrom(
@@ -35,7 +40,7 @@ class _SettingState extends State<Setting> {
                 applicationVersion: '1.0.0',
               );
             },
-            child: const Text('ライセンス'),
+            child: const Text('ライセンス',style: TextStyle(color: Colors.black)),
           ),
           TextButton(
             style: TextButton.styleFrom(
@@ -44,7 +49,7 @@ class _SettingState extends State<Setting> {
             onPressed: () {
               _RulesURL();
             },
-            child: const Text('利用規約'),
+            child: const Text('利用規約',style: TextStyle(color: Colors.black)),
           ),
           TextButton(
             style: TextButton.styleFrom(
@@ -53,7 +58,7 @@ class _SettingState extends State<Setting> {
             onPressed: () {
               _FAQURL();
             },
-            child: const Text('問い合わせ'),
+            child: const Text('問い合わせ',style: TextStyle(color: Colors.black)),
           ),
           TextButton(
             style: TextButton.styleFrom(
@@ -62,7 +67,7 @@ class _SettingState extends State<Setting> {
             onPressed: () {
               _FriendsTreeURL();
             },
-            child: const Text('Follow us!!'),
+            child: const Text('Follow us!!',style: TextStyle(color: Colors.black)),
           ),
         ],
       ),
