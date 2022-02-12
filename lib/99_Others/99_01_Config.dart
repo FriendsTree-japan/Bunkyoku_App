@@ -56,19 +56,15 @@ class SizeConfig {
 
 class ColorConfig {
   static late Color Black;
-  static late Color Orange;
   static late Color White;
   static late Color Yellow;
-  static late Color Red;
-  static late Color GrayWhite;
+  static late Color Blue;
 
   void init(BuildContext context) {
     //使用する色を定義
     Black = Color(0xFF212121);
-    Orange = Color(0xFFFFC0A3);
     White = Color(0xFFFFFFFF);
     Yellow = Color(0xFFFFF38D);
-    Red = Color(0xFFFC5836);
-    GrayWhite = Color(0xFFE2E2DF);
+    Blue = Color(0xFF12C2CD);
   }
 }
