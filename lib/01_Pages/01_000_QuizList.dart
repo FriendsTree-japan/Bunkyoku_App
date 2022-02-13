@@ -18,8 +18,7 @@ class _QuizeListState extends State<QuizeList> {
         title: Text('文京区アプリ'),
         backgroundColor: ColorConfig.Blue,
       ),
-      body: Stack(
-        alignment: AlignmentDirectional.topCenter,
+      body: Column(
         children: [
           Column(
             children: [
@@ -40,16 +39,17 @@ class _QuizeListState extends State<QuizeList> {
               ),
             ],
           ),
-          GridView(
+          Expanded(
+            child:GridView(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               mainAxisSpacing: 20,
               crossAxisSpacing: 16.0,
               crossAxisCount: 3,
               childAspectRatio:1,
             ),
-            scrollDirection: Axis.vertical,
+            // scrollDirection: Axis.vertical,
             primary: false,
-            padding: const EdgeInsets.fromLTRB(32,80,32,32),
+            padding: const EdgeInsets.fromLTRB(32,10,32,32),
             children: [
               Container(
                 alignment: Alignment.center,
@@ -404,7 +404,8 @@ class _QuizeListState extends State<QuizeList> {
                 ),
               ),
             ],
-          ), // This trailing comma makes auto-formatting nicer for build methods.
+          ),
+          )// This trailing comma makes auto-formatting nicer for build methods.
         ],
       ),
     );
