@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bunkyoku_app/99_Others/99_01_Config.dart';
-import '01_100_QuizQ_001.dart';
+import '01_100_QuizQ_000templeate.dart';
 
 
 class QuizeList extends StatefulWidget {
@@ -63,7 +63,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('1', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -79,7 +79,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('2', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -95,7 +95,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('3', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -111,7 +111,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('3', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -127,7 +127,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('4', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -143,7 +143,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('5', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -159,7 +159,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('6', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -175,7 +175,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('7', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -191,7 +191,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('8', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -207,7 +207,7 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('9', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),
@@ -223,7 +223,183 @@ class _QuizeListState extends State<QuizeList> {
                   child: Text('10', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('1', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('2', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('3', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('3', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('4', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('5', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('6', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('7', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('8', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('9', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: ColorConfig.Blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  child: Text('10', style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizQ_000()));
                   },
                 ),
               ),

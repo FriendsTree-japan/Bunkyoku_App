@@ -5,7 +5,7 @@ import '01_Pages/01_300_Setting.dart';
 import '99_Others/99_01_Config.dart';
 
 void main()async{
-  await SharedPrefs.setInstance();
+  // await SharedPrefs.setInstance();
   runApp(MyApp());
 }
 
