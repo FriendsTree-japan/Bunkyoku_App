@@ -1,13 +1,19 @@
+import 'package:bunkyoku_app/02_Config/02_02_Questuin.dart';
 import 'package:flutter/material.dart';
-import 'package:bunkyoku_app/01_Pages/01_100_QuizA_000templeate.dart';
-import 'package:bunkyoku_app/99_Others/99_01_Config.dart';
+import 'package:bunkyoku_app/01_Pages/01_100_QuizA_000.dart';
+import 'package:bunkyoku_app/02_Config/02_01_Size_Color.dart';
+import 'package:bunkyoku_app/02_Config/02_03_QuestionList.dart';
+import '../02_Config/02_02_Questuin.dart';
 
 class QuizQ_000 extends StatefulWidget {
+  late final String QuesitonNum;
+  QuizQ_000(this.QuesitonNum);
   @override
   State<QuizQ_000> createState() => _QuizQ_000();
 }
 
 class _QuizQ_000 extends State<QuizQ_000> {
+  late final String QuesitonNum = widget.QuesitonNum;
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -42,7 +48,7 @@ class _QuizQ_000 extends State<QuizQ_000> {
               icon: Icon(Icons.star_border,color: Colors.white,),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => QuizQ_000()));
+                    MaterialPageRoute(builder: (context) => QuizA_000()));
               },
             ),
           ],
@@ -61,8 +67,9 @@ class _QuizQ_000 extends State<QuizQ_000> {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Container(
-                child: const Text("No.2",
+                child: Text('No.'+QuestionList().list[QuesitonNum]!.QID,
                   textAlign: TextAlign.center,),
+                  //QestionList()でインスタンス化
               ),
             ),
             Container(
@@ -78,7 +85,11 @@ class _QuizQ_000 extends State<QuizQ_000> {
                     width: 30,
                 ),
               ),
-              child: Image.asset("images/FriendsTree.jpg"),
+              child: Image.asset(QuestionList().list[QuesitonNum]!.Picture),
+            ),
+            Container(
+              child: Text(QuestionList().list[QuesitonNum]!.problem,
+                textAlign: TextAlign.center,),
             ),
             OutlinedButton(
               child: const Text('ねこ'),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '01_100_QuizQ_000templeate.dart';
+import '01_100_QuizQ_000.dart';
 
 class QuizA_000 extends StatefulWidget {
   @override
