@@ -3,6 +3,8 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:flutter/cupertino.dart';
 
+import '01_sharedPreferences.dart';
+
 class QuizStatusDb {
   void createData() async {
     debugPrint("createData start");
@@ -16,15 +18,19 @@ class QuizStatusDb {
           );
         });
     debugPrint("createData end");
+    String? firstLoginFlg = SharedPrefs.getFirstLoginFlg();
 
-    for (int i = 1; i <= 100; i++) {
-      String query =
-          'INSERT INTO profile001(problemId,unansweredFlg, correctFlg, favoriteFlg) '
-          'VALUES($i,"0", "0", "0")';
-      await database.transaction((txn) async {
-        int id = await txn.rawInsert(query);
-        print("insert: $i");
-      });
+    if(firstLoginFlg =="0") {
+      for (int i = 1; i <= 100; i++) {
+        String query =
+            'INSERT INTO profile001(problemId,unansweredFlg, correctFlg, favoriteFlg) '
+            'VALUES($i,"0", "0", "0")';
+        await database.transaction((txn) async {
+          int id = await txn.rawInsert(query);
+          print("insert: $i");
+        });
+      }
+      await SharedPrefs.setFirstLoginFlg("1");
     }
   }
 }

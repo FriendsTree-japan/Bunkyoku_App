@@ -10,9 +10,9 @@ class SharedPrefs{
     }
   }
 
-  static Future<void> setFirstLoginFlg() async{
-    await prefsInstance!.setString('firstLoginFlg', "1");
-    print('初回ログイン完了');
+
+  static Future<void> setFirstLoginFlg(String setFlg) async{
+    await prefsInstance!.setString('firstLoginFlg', setFlg);
   }
 
   static String? getFirstLoginFlg() {

@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import '00_Utility/01_sharedPreferences.dart';
+import '00_Utility/01_sqliteDb.dart';
 import '01_Pages/01_000_QuizList.dart';
 import '01_Pages/01_300_Setting.dart';
 import '99_Others/99_01_Config.dart';
 
 void main()async{
   await SharedPrefs.setInstance();
+  await checkFirstLogin();
   runApp(MyApp());
+}
+Future<void>checkFirstLogin() async{
+  String? firstLoginFlg = SharedPrefs.getFirstLoginFlg();
+  if(firstLoginFlg == ''){
+    await SharedPrefs.setFirstLoginFlg("0");
+    QuizStatusDb().createData();
+  }
 }
 
 class MyApp extends StatelessWidget {
