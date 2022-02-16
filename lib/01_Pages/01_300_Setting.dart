@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:bunkyoku_app/99_Others/99_01_Config.dart';
+import 'package:bunkyoku_app/02_Config/02_01_Size_Color.dart';
 
 class Setting extends StatefulWidget {
   @override

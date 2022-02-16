@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:bunkyoku_app/99_Others/99_01_Config.dart';
-import '01_100_QuizQ_001.dart';
-
+import 'package:bunkyoku_app/02_Config/02_01_Size_Color.dart';
+import '01_100_QuizQ_000.dart';
 
 class QuizeList extends StatefulWidget {
+
   @override
   _QuizeListState createState() => _QuizeListState();
 }
@@ -13,13 +13,13 @@ class _QuizeListState extends State<QuizeList> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     ColorConfig().init(context);
+    String _questionNum = '';
     return Scaffold(
       appBar: AppBar(
         title: Text('文京区アプリ'),
         backgroundColor: ColorConfig.Blue,
       ),
-      body: Stack(
-        alignment: AlignmentDirectional.topCenter,
+      body: Column(
         children: [
           Column(
             children: [
@@ -40,207 +40,42 @@ class _QuizeListState extends State<QuizeList> {
               ),
             ],
           ),
-          GridView(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              mainAxisSpacing: 20,
-              crossAxisSpacing: 16.0,
-              crossAxisCount: 3,
-              childAspectRatio:1,
+          Expanded(
+            child:GridView(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                mainAxisSpacing: 20,
+                crossAxisSpacing: 16.0,
+                crossAxisCount: 3,
+                childAspectRatio:1,
+              ),
+              // scrollDirection: Axis.vertical,
+              primary: false,
+              padding: const EdgeInsets.fromLTRB(32,10,32,32),
+              children:<Widget> [
+                for (int i = 1; i <= 100; i++)
+                  Container(
+                    alignment: Alignment.center,
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: ColorConfig.Blue,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: TextButton(
+                      child: Text(i.toString(), style: TextStyle(color: Colors.white),),
+                      onPressed: () {
+                        _questionNum = i.toString();
+                        Navigator.push(context,
+                          MaterialPageRoute(builder: (BuildContext context) => QuizQ_000(_questionNum),),
+                        );
+                      },
+                    ),
+                  ),
+              ],
             ),
-            scrollDirection: Axis.vertical,
-            primary: false,
-            padding: const EdgeInsets.fromLTRB(32,80,32,32),
-            children: [
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('1', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('2', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('3', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('3', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('4', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('5', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('6', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('7', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('8', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('9', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: ColorConfig.Blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: TextButton(
-                  child: Text('10', style: TextStyle(color: Colors.white),),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => QuizQ_001()));
-                  },
-                ),
-              ),
-            ],
-          ), // This trailing comma makes auto-formatting nicer for build methods.
+          )// This trailing comma makes auto-formatting nicer for build methods.
         ],
       ),
     );
   }
 }
-
-// Container myContainer(String text) {
-//   return Container(
-//     alignment: Alignment.center,
-//     width: 100,
-//     height: 100,
-//     color: Colors.green,
-//     child: Text(text),
-//   );
-// }

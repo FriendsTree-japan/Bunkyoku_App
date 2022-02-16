@@ -3,11 +3,15 @@ import '00_Utility/01_sharedPreferences.dart';
 import '00_Utility/01_sqliteDb.dart';
 import '01_Pages/01_000_QuizList.dart';
 import '01_Pages/01_300_Setting.dart';
-import '99_Others/99_01_Config.dart';
+import '02_Config/02_01_Size_Color.dart';
 
 void main()async{
+<<<<<<< HEAD
   await SharedPrefs.setInstance();
   await checkFirstLogin();
+=======
+  // await SharedPrefs.setInstance();
+>>>>>>> 1cc7ed987c77d097fa1094612e717c325d5a5f88
   runApp(MyApp());
 }
 Future<void>checkFirstLogin() async{
