@@ -6,12 +6,9 @@ import '01_Pages/01_300_Setting.dart';
 import '02_Config/02_01_Size_Color.dart';
 
 void main()async{
-<<<<<<< HEAD
+  WidgetsFlutterBinding.ensureInitialized();
   await SharedPrefs.setInstance();
-  await checkFirstLogin();
-=======
-  // await SharedPrefs.setInstance();
->>>>>>> 1cc7ed987c77d097fa1094612e717c325d5a5f88
+  checkFirstLogin();
   runApp(MyApp());
 }
 Future<void>checkFirstLogin() async{

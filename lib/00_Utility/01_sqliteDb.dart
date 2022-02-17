@@ -23,7 +23,7 @@ class QuizStatusDb {
     if(firstLoginFlg =="0") {
       for (int i = 1; i <= 100; i++) {
         String query =
-            'INSERT INTO profile001(problemId,unansweredFlg, correctFlg, favoriteFlg) '
+            'INSERT INTO quizStatus(problemId,unansweredFlg, correctFlg, favoriteFlg) '
             'VALUES($i,"0", "0", "0")';
         await database.transaction((txn) async {
           int id = await txn.rawInsert(query);
