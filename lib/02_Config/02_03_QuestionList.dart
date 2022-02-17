@@ -6,7 +6,7 @@ class QuestionList {
     Question(
       QID: '1',
       Picture: 'images/FriendsTree.jpg',
-      problem: '下記4つのうちどれでしょうか\nあああ',
+      problem: '下記4つのうちどれでしょうか\n下記4つのうちどれでしょうか',
       Select1: 'ねこ',
       Select2: 'いぬ',
       Select3: 'たこ',
